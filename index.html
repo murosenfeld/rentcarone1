@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>Rent Car One</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link rel="stylesheet" type="text/css" media="all" href="css/niceforms-default.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>  
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/zebra_cookie.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="js/jssor.slider.mini.js"></script>
+        <script type="text/javascript" src="js/jquery.cookie.js"></script> 
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <script src="js/sweet-alert.js"></script>
+        <link rel="stylesheet" href="css/sweet-alert.css"/>
+        <link rel="stylesheet" type="text/css" media="all" href="css/niceforms-default.css" />
+    </head>
+    <body>
+        <div id="content">
+            <div id="welcome" hidden=""></div>
+            <div class="post">
+
+                <div class="btn-sign">
+                    <a href="#login-box" class="login-window">Login</a>
+                </div> </div>
+            <div class="delcook">
+                <input type="button" class="myButton1" value="Log Out" onclick="delcook();">
+            </div>
+
+            <div id="login-box" class="login-popup">
+                <a href="#" class="close"><img src="imageRentCars/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                <form method="post" id="myForm" class="signin" action="server/check.php">
+                    <fieldset class="textbox">
+                        <label class="username">
+                            <span>Email</span>
+                            <input id="email" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                        </label>
+
+                        <label class="password">
+                            <span>Password</span>
+                            <input id="password" name="password" value="" type="password" placeholder="Password">
+                        </label>
+                        <div id="imagegLogo">
+                            <img src="imageRentCars/logo.PNG" border="0" alt="auction slider" width="125"
+                                 height="100" />
+                        </div>
+                        <button id="submit" class="submitbutton" type="button">Sign in</button>
+
+
+                        <p>
+
+                            <a class="forgot" href="#">Forgot your password?</a>
+                        </p>
+                        <div id="ack"></div>
+                    </fieldset>
+                </form>
+                <div id="user">
+
+                </div>
+            </div>
+        </div>
+
+        
+         <div class="main clearfix">
+                    <nav id="menu" class="nav">					
+                        <ul>
+                           <li>
+                            <a href="index.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-home"></i>
+                                </span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li id="service">
+                            <a href="services.html">
+                                <span class="icon"> 
+                                    <i aria-hidden="true" class="icon-services"></i>
+                                </span>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li id="registrado">
+                            <a href="register.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-blog"></i>
+                                </span>
+                                <span>Register</span>
+                            </a>
+                        </li>
+                         <li id="ver">
+                                            <a href="statisticalClient.html">
+                                                <span class="icon">
+                                                    <i aria-hidden="true" class="icon-team"></i>
+                                                </span>
+                                                <span>statistical by client</span>
+                                            </a>
+                                        </li>
+                        <li id="ver2">
+                            <a href="statistical.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>statistical</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="ContactForm/index.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-contact"></i>
+                                </span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="edit">
+                            <a href="editplace.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>Edit Table</span>
+                            </a>
+                        </li>
+                         <li id="client">
+                                <a href="ordersbyClient.html">
+                                    <span class="icon">
+                                        <i aria-hidden="true" class="icon-team"></i>
+                                    </span>
+                                    <span>Orders by client</span>
+                                </a>
+                            </li>
+                        <li id="branch">
+                            <a href="branchOffice.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>Branch Office</span>
+                            </a>
+                        </li>
+                        <li id="video">
+                                <a href="video/video.html">
+                                    <span class="icon">
+                                        <i aria-hidden="true" class="icon-team"></i>
+                                    </span>
+                                    <span>Video</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        
+        
+
+        <div style="position: relative; width: 100%; background-color: #003399; overflow: hidden;">
+            <div style="position: relative; left: 50%; width: 5000px; text-align: center; margin-left: -2500px;">
+                <!-- Jssor Slider Begin -->
+                <div id="slider1_container" style="position: relative; margin: 0 auto;
+                     top: 0px; left: 0px; width: 980px; height: 400px; background: url(../img/major/main_bg.jpg) top center no-repeat;">
+                    <!-- Loading Screen -->
+                    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
+                             top: 0px; left: 0px; width: 100%; height: 100%;">
+                        </div>
+                        <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                             top: 0px; left: 0px; width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <!-- Slides Container -->
+                    <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 980px;
+                         height: 400px; overflow: hidden;">
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <br />
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">results driven</span>
+                                <br />
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    iT Solutions & Services </span>
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 1.5em; color: #FFFFFF;">
+                                    Our professional services help you address the ever evolving business and technological
+                                    challenges.</span>
+                                <br />
+                                <br />
+                                <a href="http://www.jssor.com">
+                                    <img src="imageRentCars/logo2.PNG" border="0" alt="auction slider" width="125"
+                                         height="100" /></a>
+                            </div>
+                            <img src="RentCarImage/focus.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/focus.jpg" />
+                        </div>
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">web design & development</span>
+                                <br />
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    Visually Compelling & Functional </span>
+                                <br />
+                                <br />
+
+                                <img src="imageRentCars/logo2.PNG" border="0" alt="ebay slideshow" width="125"
+                                     height="100" />
+                            </div>
+                            <img src="RentCarImage/fluence.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/fluence.jpg" />
+                        </div>
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">Online marketing</span>
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    We enhance your brand, your website traffic and your bottom line online. </span>
+                                <br />
+                                <br />
+                                <a href="http://www.jssor.com">
+                                    <img src="imageRentCars/logo.PNG" border="0" alt="listing slider" width="125"
+                                         height="100" /></a>
+                            </div>
+                            <img src="RentCarImage/S 80.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/S 80.jpg" />
+                        </div>
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <br />
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">web hosting</span>
+                                <br />
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    we offer the web's best hosting plans for every site. </span>
+                                <br />
+                                <br />
+                                <a href="http://www.jssor.com">
+                                    <img src="imageRentCars/logo2.PNG" border="0" alt="ebay store slider" width="125"
+                                         height="100" /></a>
+                            </div>
+                            <img src="RentCarImage/MX 5.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/MX 5.jpg" />
+                        </div>
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">domain name registration</span>
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    Secure your online identity and register your domain now. </span>
+                                <br />
+                                <br />
+                                <a href="http://www.jssor.com">
+                                    <img src="imageRentCars/logo2.PNG" border="0" alt="listing template slider"
+                                         width="125"
+                                         height="100" /></a>
+                            </div>
+                            <img src="RentCarImage/V 60.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/V 60.jpg" />
+                        </div>
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <br />
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">video production</span>
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    Make a greater impact on your clients through interactive Video Production.
+                                </span>
+                                <br />
+                                <br />
+                                <a href="http://www.jssor.com">
+                                    <img src="imageRentCars/logo2.PNG" border="0" alt="auction template slider"
+                                         width="125" height="100" /></a>
+                            </div>
+                            <img src="RentCarImage/2.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/2.jpg" />
+                        </div>
+                        <div>
+                            <div style="position: absolute; width: 480px; height: 300px; top: 10px; left: 10px;
+                                 text-align: left; line-height: 1.8em; font-size: 12px;">
+                                <span style="display: block; line-height: 1em; text-transform: uppercase; font-size: 52px;
+                                      color: #FFFFFF;">mobile applications</span>
+                                <br />
+                                <span style="display: block; line-height: 1.1em; font-size: 2.5em; color: #FFFFFF;">
+                                    Stay connected to your customers on the go with a MajorMedia custom mobile app.
+                                    <br />
+                                    <br />
+                                    <a href="http://www.jssor.com">
+                                        <img src="imageRentCars/logo2.PNG" border="0" alt="ebay slider" width="125"
+                                             height="100" /></a>
+                            </div>
+                            <img src="RentCarImage/3 Saloon.jpg" style="position: absolute; top: 23px; left: 480px; width: 500px; height: 300px;" />
+                            <img u="thumb" src="RentCarImage/3 Saloon.jpg" />
+                        </div>
+                    </div>
+                    <!-- Arrow Navigator Skin Begin -->
+
+                    <!-- Arrow Left -->
+                    <span u="arrowleft" class="jssora07l" style="width: 50px; height: 50px; top: 123px;
+                          left: 8px;"></span>
+                    <!-- Arrow Right -->
+                    <span u="arrowright" class="jssora07r" style="width: 50px; height: 50px; top: 123px;
+                          right: 8px"></span>
+                    <!-- Arrow Navigator Skin End -->
+                    <!-- ThumbnailNavigator Skin Begin -->
+                    <div u="thumbnavigator" class="jssort04" style="position: absolute; width: 600px;
+                         height: 60px; right: 0px; bottom: 0px;">
+                        <!-- Thumbnail Item Skin Begin -->
+
+                        <div u="slides" style="bottom: 25px; right: 30px;">
+                            <div u="prototype" class="p" style="position: absolute; width: 62px; height: 32px; top: 0; left: 0;">
+                                <div class="w">
+                                    <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
+                                </div>
+                                <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thumbnail Item Skin End -->
+                    </div>
+                    <!-- ThumbnailNavigator Skin End -->
+                    <a style="display: none" href="http://www.jssor.com">responsive carousel</a>
+                </div>
+                <!-- Jssor Slider End -->
+            </div>
+        </div>
+
+        <br>
+            <div id="container">
+
+               
+
+
+
+                <form action=" " method="post" class="niceform">
+                    <br>
+                        <fieldset>
+                            <legend>Select models</legend>
+                            <dl>
+                                <dt><label for="color">Type of model:</label></dt>
+                                <dd>
+                                    <input type="radio" name="type" id="Small" value="Small" /><label for="typesmall" class="opt">Small</label>
+                                    <input type="radio" name="type" id="Medium" value="Medium" /><label for="typemedium" class="opt">Medium</label>
+                                    <input type="radio" name="type" id="Family" value="Family" /><label for="typefamily" class="opt">Family</label>
+                                    <input type="radio" name="type" id="Sport" value="Sport" /><label for="typesport" class="opt">Sport</label>
+                                    <input type="radio" name="type" id="Business" value="Business" /><label for="typebusiness" class="opt">Business</label>
+                                    <input type="button" class="myButton" value="Select" onclick="chooseType();">
+                                </dd>
+                            </dl>
+
+                            <table id="report">
+
+                                <tr>
+                                    <td>Defualt</td>
+                                    <td><div class="rwd-table"></div></td>
+                                </tr>
+
+                            </table>  
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Select by cars</legend>
+
+                            <dl>
+                                <dt><label for="languages">Mark of car:</label></dt>
+                                <dd>
+                                    <select id="clients" onchange="if (this.selectedIndex)
+                                                            selectCar(this.selectedIndex + 1);">
+                                        <option>Default</option>
+                                    </select>
+                                    <div id="image"></div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt><label for="languages">Model:</label></dt>
+                                <dd>
+                                    <select id="models" onchange="callSelectCarModel();">
+                                        <option>Default</option>
+                                    </select>
+                                    <div id="images"></div>
+                                </dd>
+                            </dl>
+
+
+                            <table id="selectCar">
+                                <tr>
+                                    <td>Defualt</td>
+                                    <td><div class="rwd-table"></div></td>
+                                </tr>
+                            </table>  
+
+                        </fieldset>
+
+
+                        <fieldset>
+                            <legend>Select by city</legend>
+
+                            <dl>
+                                <dt><label for="interests">Interests:</label></dt>
+                                <dd>
+                                    <input type="checkbox" name="interests" id="interests" value="TelAviv" /><label for="interestsNews" class="opt">Tel-Aviv</label>
+                                    <input type="checkbox" name="interests" id="interests" value="Jerusalem" /><label for="interestsSports" class="opt">Jerusalem</label>
+                                    <input type="checkbox" name="interests" id="interests" value="Haifa" /><label for="interestsEntertainment" class="opt">Haifa</label>
+                                    <input type="checkbox" name="interests" id="interests" value="Ashdod" /><label for="interestsCars" class="opt">Ashdod</label>
+                                    <input type="checkbox" name="interests" id="interests" value="Eilat" /><label for="interestsTechnology" class="opt">Eilat</label>
+                                    <input type="button" class="myButton" value="Select" id="cc" onclick="chooseCity();">
+                                        <input type='button' value='UnCheck It' id='UnCheckIt'>
+
+                                            </dd>
+                                            </dl>
+
+                                            <table id="city">
+                                                <tr>
+                                                    <td>Defualt</td><!-- <a href="#Aqui URL" class="boton colorBoton formaBoton">order</a>-->
+                                                    <td><div class="rwd-table"></div></td>
+                                                </tr>
+                                            </table> 
+                                            </fieldset>
+                                            </form>
+                                            </div>
+                                            </body>
+                                            </html>
+
+

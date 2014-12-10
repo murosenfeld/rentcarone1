@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Rent Car One</title>
+        <link rel="stylesheet" href="css/services.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/niceforms-default.css" />
+        <script src="js/modernizr.custom.js"></script>	
+        <link rel="stylesheet" type="text/css" href="css/component.css"/>    
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script> 
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/jssor.core.js"></script>
+        <script type="text/javascript" src="js/jssor.utils.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.js"></script>
+         <script type="text/javascript" src="js/jquery.cookie.js"></script> 
+        <script type="text/javascript" src="js/zebra_cookie.js"></script>
+        <script type="text/javascript" src="js/services.js"></script>
+       
+    </head>
+    <body style="font-family:Arial, Verdana;background-color:#fff;">
+        <div id="content">
+            <div id="welcome" hidden=""></div>
+            <div class="post">
+
+                <div class="btn-sign">
+                    <a href="#login-box" class="login-window">Login</a>
+                </div> </div>
+            <div class="delcook">
+                <input type="button" class="myButton1" value="Log Out" onclick="delcook();">
+            </div>
+
+            <div id="login-box" class="login-popup">
+                <a href="#" class="close"><img src="imageRentCars/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                <form method="post" id="myForm" class="signin" action="server/check.php">
+                    <fieldset class="textbox">
+                        <label class="username">
+                            <span>Email</span>
+                            <input id="email" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                        </label>
+
+                        <label class="password">
+                            <span>Password</span>
+                            <input id="password" name="password" value="" type="password" placeholder="Password">
+                        </label>
+                        <div id="imagegLogo">
+                            <img src="imageRentCars/logo.PNG" border="0" alt="auction slider" width="125"
+                                 height="100" />
+                        </div>
+                        <button id="submit" class="submitbutton" type="button">Sign in</button>
+
+
+                        <p>
+
+                            <a class="forgot" href="#">Forgot your password?</a>
+                        </p>
+                        <div id="ack"></div>
+                    </fieldset>
+                </form>
+                <div id="user">
+
+                </div>
+            </div>
+        </div>
+            <div class="main clearfix">
+                <nav id="menu" class="nav">					
+                    <ul>
+                  <li>
+                            <a href="index.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-home"></i>
+                                </span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li id="service">
+                            <a href="services.html">
+                                <span class="icon"> 
+                                    <i aria-hidden="true" class="icon-services"></i>
+                                </span>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li id="registrado">
+                            <a href="register.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-blog"></i>
+                                </span>
+                                <span>Register</span>
+                            </a>
+                        </li>
+                         <li id="ver">
+                                            <a href="statisticalClient.html">
+                                                <span class="icon">
+                                                    <i aria-hidden="true" class="icon-team"></i>
+                                                </span>
+                                                <span>statistical by client</span>
+                                            </a>
+                                        </li>
+                        <li id="ver2">
+                            <a href="statistical.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>statistical</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="ContactForm/index.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-contact"></i>
+                                </span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="edit">
+                            <a href="editplace.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>Edit Table</span>
+                            </a>
+                        </li>
+                         <li id="client">
+                                <a href="ordersbyClient.html">
+                                    <span class="icon">
+                                        <i aria-hidden="true" class="icon-team"></i>
+                                    </span>
+                                    <span>Orders by client</span>
+                                </a>
+                            </li>
+                        <li id="branch">
+                            <a href="branchOffice.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>Branch Office</span>
+                            </a>
+                        </li>
+                        <li id="video">
+                                <a href="video/video.html">
+                                    <span class="icon">
+                                        <i aria-hidden="true" class="icon-team"></i>
+                                    </span>
+                                    <span>Video</span>
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div style="display: block; overflow: hidden; margin: 280px auto 0 auto; padding: 10px 5px 5px 10px; width: 96%; max-width:940px; min-width: 240px; border: 1px solid #ccc; background-color: #fff; box-shadow: 2px 2px 10px 2px #dddddd; -webkit-box-shadow: 0px 0px 5px 0px #dddddd; font-size: .8em; line-height: 1.5em; position: absolute; left:425px">
+            <!-- Jssor Slider Begin -->
+            <!-- You can move inline styles to css file or css block. -->
+            <div id="slider2_container" style="position: relative; margin: 0px 5px 5px 0px; float: left; top: 0px; left: 0px; width: 600px;
+                 height: 300px; overflow: hidden;">
+                <!-- Slides Container -->
+                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
+                    <div><img u="image" src="images/cars1.jpg" />
+                        <div u="caption" t="CLIP|L" style="position:absolute;left:100px;top:80px;width:110px;height:40px;font-size:36px;color:#fff;line-height:40px;">Rent</div>
+                        <div u="caption" t="CLIP|L" style="position:absolute;left:230px;top:80px;width:120px;height:40px;font-size:36px;color:#fff;line-height:40px;">Car</div>
+                        <div u="caption" t="CLIP|L" style="position:absolute;left:380px;top:80px;width:130px;height:40px;font-size:36px;color:#fff;line-height:40px;">One!</div>
+                    </div>
+                    <div><img u="image" src="images/cars2.jpg" />
+                        <div u="caption" t="ZMF|10" style="position:absolute;left:100px;top:80px;width:110px;height:40px;font-size:36px;color:#fff;line-height:40px;">Rent</div>
+                        <div u="caption" t="ZMF|10" style="position:absolute;left:230px;top:80px;width:120px;height:40px;font-size:36px;color:#fff;line-height:40px;">Car</div>
+                        <div u="caption" t="ZMF|10" style="position:absolute;left:380px;top:80px;width:130px;height:40px;font-size:36px;color:#fff;line-height:40px;">One!</div>
+                    </div>
+                    <div><img u="image" src="images/cars3.jpeg" />
+                        <div u="caption" t="RTT|10" style="position:absolute;left:100px;top:80px;width:110px;height:40px;font-size:36px;color:#fff;line-height:40px;">Rent</div>
+                        <div u="caption" t="RTT|10" style="position:absolute;left:230px;top:80px;width:120px;height:40px;font-size:36px;color:#fff;line-height:40px;">Car</div>
+                        <div u="caption" t="RTT|10" style="position:absolute;left:380px;top:80px;width:130px;height:40px;font-size:36px;color:#fff;line-height:40px;">One!</div>
+                    </div>
+                    <div><img u="image" src="images/cars2.jpg" />
+                        <div u="caption" t="FLTTR|R" style="position:absolute;left:100px;top:80px;width:110px;height:40px;font-size:36px;color:#fff;line-height:40px;">Rent</div>
+                        <div u="caption" t="FLTTR|R" style="position:absolute;left:230px;top:80px;width:120px;height:40px;font-size:36px;color:#fff;line-height:40px;">Car</div>
+                        <div u="caption" t="FLTTR|R" style="position:absolute;left:380px;top:80px;width:130px;height:40px;font-size:36px;color:#fff;line-height:40px;">One!</div>
+                    </div>
+                </div>
+                <a style="display: none" href="http://www.jssor.com">responsive carousel</a>
+            </div>
+            <!-- Jssor Slider End -->
+            <div id="clearFixDiv" style="display: table; padding: 5px; margin: 0px 5px 5px 0px; border: 1px solid #ccc;">
+         
+            </div>
+            <p style="margin-top:10px;"><span style="padding: 2px; background-color: #ddd;">Get 24/7 road service - English speaking help desk
+bullet Get personal help 24/7
+bullet Get replacement car in case of accident or theft.</span></p>
+            <p style="margin-top:0px;">Third party liability
+bullet You are covered in case of accidents with 3rd parties.</p>
+            <p style="margin-top:0px;">Flexible images are also sized in relative units, so as to prevent them from displaying outside their containing element.</p>
+            <p style="margin-top:0px;">Jssor Slider responds to window resizing, it scales smoothly, it keeps correct ratio, and animation is running with no stop. Wow, touch swipe still works great.</p>
+            <p style="margin-top:0px; font-weight: bold;">Resize window to see how it works!</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>Rent Car One</title>	
+        <link rel="stylesheet" type="text/css" media="all" href="css/niceforms-default.css" />
+        <script src="js/modernizr.custom.js"></script>	
+        <link rel="stylesheet" type="text/css" href="css/component.css"/>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/zebra_cookie.js"></script>
+        <script src="js/editplace.js"></script>    
+        <style>
+
+            .wideBox {
+                clear: both;
+                text-align: center;
+                margin-bottom: 50px;
+                padding: 10px;
+                background: #ebedf2;
+                border: 1px solid #333;
+                line-height: 80%;
+            }
+
+            #container {
+                width: 900px;
+                margin: 0 auto;
+            }
+
+            #chart, #chartData, #chartClient {
+                border: 1px solid #333;
+                background: #ebedf2 url("images/gradient.png") repeat-x 0 0;
+            }
+
+            #chart {
+                display: block;
+                margin: 0 0 50px 0;
+                float: left;
+                cursor: pointer;
+            }
+
+            #chartData , #chartClient{
+                width: 200px;
+                margin: 0 40px 0 0;
+                float: right;
+                border-collapse: collapse;
+                box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+                -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+                -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+                background-position: 0 -100px;
+            }
+
+            #chartData th, #chartData td , #chartClient th, #chartClient td{
+                padding: 0.5em;
+                border: 1px dotted #666;
+                text-align: left;
+            }
+
+            #chartData th , #chartClient th {
+                border-bottom: 2px solid #333;
+                text-transform: uppercase;
+            }
+
+            #chartData td ,#chartClient td{
+                cursor: pointer;
+            }
+
+            #chartData td.highlight, #chartClient td.highlight{
+                background: #e8e8e8;
+            }
+
+            #chartData tr:hover td, #chartClient tr:hover td{
+                background: #f0f0f0;
+            }
+
+
+            .contenedor{margin:60px auto;width:960px;font-family:sans-serif;font-size:15px}
+            table {width:100%;box-shadow:0 0 10px #ddd;text-align:left}
+            th {padding:5px;background:#555;color:#fff}
+            td {padding:5px;border:solid #ddd;border-width:0 0 1px;}
+            .editable span{display:block;}
+            .editable span:hover {background:url(images/edit.png) 90% 50% no-repeat;cursor:pointer}
+
+            td input{height:24px;width:200px;border:1px solid #ddd;padding:0 5px;margin:0;border-radius:6px;vertical-align:middle}
+            a.enlace{display:inline-block;width:24px;height:24px;margin:0 0 0 5px;overflow:hidden;text-indent:-999em;vertical-align:middle}
+            .guardar{background:url(images/save.png) 0 0 no-repeat}
+            .cancelar{background:url(images/cancel.png) 0 0 no-repeat}
+
+            .mensaje{display:block;text-align:center;margin:0 0 20px 0}
+            .ok{display:block;padding:10px;text-align:center;background:green;color:#fff}
+            .ko{display:block;padding:10px;text-align:center;background:red;color:#fff}
+
+        </style>
+
+
+
+    </head>
+
+    <body>
+        <div id="content">
+            <div id="welcome" hidden=""></div>
+            <div class="post">
+
+                <div class="btn-sign">
+                    <a href="#login-box" class="login-window">Login</a>
+                </div> </div>
+            <div class="delcook">
+                <input type="button" class="myButton1" value="Log Out" onclick="delcook();">
+            </div>
+
+            <div id="login-box" class="login-popup">
+                <a href="#" class="close"><img src="imageRentCars/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+                <form method="post" id="myForm" class="signin" action="server/check.php">
+                    <fieldset class="textbox">
+                        <label class="username">
+                            <span>Email</span>
+                            <input id="email" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                        </label>
+
+                        <label class="password">
+                            <span>Password</span>
+                            <input id="password" name="password" value="" type="password" placeholder="Password">
+                        </label>
+                        <div id="imagegLogo">
+                            <img src="imageRentCars/logo.PNG" border="0" alt="auction slider" width="125"
+                                 height="100" />
+                        </div>
+                        <button id="submit" class="submitbutton" type="button">Sign in</button>
+
+
+                        <p>
+
+                            <a class="forgot" href="#">Forgot your password?</a>
+                        </p>
+                        <div id="ack"></div>
+                    </fieldset>
+                </form>
+                <div id="user">
+
+                </div>
+            </div>
+        </div>
+            <div class="main clearfix">
+                <nav id="menu" class="nav">					
+                    <ul>
+                       <li>
+                            <a href="index.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-home"></i>
+                                </span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li id="service">
+                            <a href="services.html">
+                                <span class="icon"> 
+                                    <i aria-hidden="true" class="icon-services"></i>
+                                </span>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li id="registrado">
+                            <a href="register.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-blog"></i>
+                                </span>
+                                <span>Register</span>
+                            </a>
+                        </li>
+                         <li id="ver">
+                                            <a href="statisticalClient.html">
+                                                <span class="icon">
+                                                    <i aria-hidden="true" class="icon-team"></i>
+                                                </span>
+                                                <span>statistical by client</span>
+                                            </a>
+                                        </li>
+                        <li id="ver2">
+                            <a href="statistical.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>statistical</span>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="ContactForm/index.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-contact"></i>
+                                </span>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li id="edit">
+                            <a href="editplace.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>Edit Table</span>
+                            </a>
+                        </li>
+                         <li id="client">
+                                <a href="ordersbyClient.html">
+                                    <span class="icon">
+                                        <i aria-hidden="true" class="icon-team"></i>
+                                    </span>
+                                    <span>Orders by client</span>
+                                </a>
+                            </li>
+                        <li id="branch">
+                            <a href="branchOffice.html">
+                                <span class="icon">
+                                    <i aria-hidden="true" class="icon-team"></i>
+                                </span>
+                                <span>Branch Office</span>
+                            </a>
+                        </li>
+                        <li id="video">
+                                <a href="video/video.html">
+                                    <span class="icon">
+                                        <i aria-hidden="true" class="icon-team"></i>
+                                    </span>
+                                    <span>Video</span>
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div id="container">
+
+            <div class="wideBox">
+                <h1 style="color: #0DA068">Insert new cars</h1>
+                <p style="color: #0DA068">Select and define the model in the table</p>
+            </div>
+
+
+
+        </div>
+        <div class="contenedor">
+            <h1 id="table">Table of all models</h1>
+            <div class="mensaje"></div>
+            <table class="editinplace">
+                <tr>
+                    <th>IdModels</th>
+                    <th>Year</th>
+                    <th>NameModel</th>
+                    <th>Color</th>
+                    <th>SeatingCapacity</th>
+                    <th>TypeOfMotor</th>
+                    <th>TypeModel</th>
+                    <th>Air Condition</th>
+                    <th>PriceDay</th>
+                    <th>PriceMont</th>
+                    <th>ImageModel</th>
+                    <th>manufactorId</th>
+                    <th>city</th>
+
+                </tr>
+            </table>
+        </div>
+
+    </body>
+
+</html>
+

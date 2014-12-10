@@ -1,0 +1,77 @@
+@CHARSET "ISO-8859-1";
+
+div#map_Haifa{
+				width: 550px;
+				height: 300px;
+				 left: 10%;
+				 border: aquamarine;
+border-style: solid;
+border-radius: 10px;
+			}
+                        div#map_Jerusalem{
+				width: 550px;
+				height: 300px;
+				 left: 10%;
+                 border: aquamarine;
+border-style: solid;
+border-radius: 10px;              
+			}
+                        div#map_TelAviv{
+				width: 550px;
+				height: 300px;
+                border: aquamarine;
+border-style: solid;
+border-radius: 10px;                 left: 60%;
+			}
+                        div#map_Ashdod{
+				width: 550px;
+				height: 300px;
+				border: aquamarine;
+border-style: solid;
+border-radius: 10px;
+                                   left: 60%;
+                               
+			}
+                        div#map_Eilat{
+				width: 550px;
+				height: 300px;
+				 left: 10%;
+                 border: aquamarine;
+border-style: solid;
+border-radius: 10px;             
+			}
+			
+			#plocationr{
+			text-decoration: none;
+ color: #fff;
+ font-weight: bold;
+ padding: 12px 20px;
+ font-size: 18px;
+ border-radius: 10px;
+ background-color: #666666;
+ box-shadow: 0 5px 5px #313131, 0 9px 0 #393939, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 9px rgba(255,255,255,0.2), inset 0 -2px 9px rgba(0,0,0,0.2);
+ position: relative;
+ border-bottom: 1px solid rgba(255,255,255,0.2);
+ display: inline-block;
+ font-family: Arial, Helvetica, sans;
+ text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+ left: 10%;			
+			}
+			
+			#plocationl{
+			text-decoration: none;
+ color: #fff;
+ font-weight: bold;
+ padding: 12px 20px;
+ font-size: 18px;
+ border-radius: 10px;
+ background-color: #666666;
+ box-shadow: 0 5px 5px #313131, 0 9px 0 #393939, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 9px rgba(255,255,255,0.2), inset 0 -2px 9px rgba(0,0,0,0.2);
+ position: relative;
+ border-bottom: 1px solid rgba(255,255,255,0.2);
+ display: inline-block;
+ font-family: Arial, Helvetica, sans;
+ text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+ left: 60%;
+			
+			}
